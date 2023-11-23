@@ -14,7 +14,7 @@ def inserir(conn, cursor):
     id = int(input("Digite o ID: "))
     nome = input("Digite o nome: ")
     idade = int(input("Digite a idade: "))
-    sql = "INSERT INTO Pacientes1 (id, nome, idade) VALUES (:id, :nome, :idade)"
+    sql = "INSERT INTO Pacientes (id, nome, idade) VALUES (:id, :nome, :idade)"
     cursor.execute(sql, {"id": id, "nome": nome, "idade": idade})
     conn.commit()
    
